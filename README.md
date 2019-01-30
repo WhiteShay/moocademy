@@ -1,4 +1,4 @@
-# README POUR LE BLOG
+# README POUR LE MOOCADEMY
 
 Deux gems supplémentaires ont été installé : gem table_print et la gem faker
 
