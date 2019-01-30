@@ -1,24 +1,26 @@
-# README
+# README POUR LE BLOG
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Deux gems supplémentaires ont été installé : gem table_print et la gem faker
 
-Things you may want to cover:
+## Projet de Nora Bourouis et Hamdi Nassri
 
-* Ruby version
+Cette base de données a été créé pour une plateforme d'apprentissage en ligne. Il y a plein de cours. Chaque cours a un titre et une description. Enfin, chaque cours a plusieurs leçons, qui ont un titre et un body.
 
-* System dependencies
+Pour se faire, on a crée une base de donnée avec 2 modèles : celui d'un cours (Lecture), celui d'une leçon (Lesson).
 
-* Configuration
+### Description des models
 
-* Database creation
+Ces deux modèles ont une relation 1,n (one to many), où les cours (lecture) plusieurs lessons (has_many :lessons) et où les leçons peuvent n'avoir qu'un seul cours (belongs_to :lecture)
 
-* Database initialization
+Le modèle d'une leçon est donc lié à l'id du cours. 
 
-* How to run the test suite
 
-* Services (job queues, cache servers, search engines, etc.)
+### Autres infos
 
-* Deployment instructions
+Dans un fichier seeds.rb, on a généré automatiquement des éléments pour chaques models grâce à la gem faker. Pour réaliser l'action de ce fichier il suffit de taper 'rails db:seed ' dans la console.
 
-* ...
+Pour lire la database, tapez un "rails console" dans le terminal, puis checker les tables avec un 'tp NomDuModel.all'. 
+
+Enjoy ;) 
+
+
